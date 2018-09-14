@@ -2,6 +2,7 @@
 #define ARRAY_BASED_PD_H_
 #include <string>
 
+
 /** Specification file for the array-based phone directory.
  */
 class Phone_Directory
@@ -57,7 +58,11 @@ private:
 		//completed by Allysa Sewell
 	{
 	public:
-		Directory_Entry() {} //Default no-arg constructor
+		Directory_Entry()
+		{
+		  name = ""; 
+		  number = "";
+		} //Default no-arg constructor
 		Directory_Entry(std::string the_name, std::string the_number)
 		{
 			name = the_name;
@@ -78,8 +83,8 @@ private:
 
 	
 	private:
-		string name;
-		string number;
+		std::string name;
+		std::string number;
 	};
 
 	// Private Functions
